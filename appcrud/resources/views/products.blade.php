@@ -8,9 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body></body>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">CRUD</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,14 +17,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" href="/products">Products</a>
                     <a class="nav-link" href="#">Customers</a>
                     <a class="nav-link" href="#">Orders</a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        <h1>Products</h1>
+
+        <a class="btn btn-success" href="{{ route('addproduct') }}">
+            Add
+        </a>
+            <div class="mb-3">
+                <h2>Listagem</h2>
+            </div>
+    </div>
 
     
 
