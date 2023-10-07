@@ -17,11 +17,11 @@ class SaveRequest extends FormRequest
         return [
             'name' => 'required|string',
             'price' => 'required|decimal:2',
-            'description' => 'required|string',
+            'description' => 'string',
             'color' => 'string',
             'quantity' => 'required|integer',
-            'height' => 'required|decimal:1,2',
-            'weight' => 'required|decimal:1,2',
+            'height' => 'decimal:1,2',
+            'weight' => 'decimal:1,2',
         ];
     }
 }

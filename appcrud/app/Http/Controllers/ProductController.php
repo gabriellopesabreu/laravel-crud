@@ -3,32 +3,40 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Product\SaveRequest;
-use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index() 
+    public function index()
     {
         return view(view: 'home');
     }
 
-    public function products() 
+    public function products()
     {
         return view(view: 'products');
     }
 
-    public function addproduct() 
+    public function addproduct()
     {
         return view(view: 'addProduct');
     }
 
     public function save(
-        Request $request
-    ){
-        $nome = $request->input('nome');
-        $price = $request->input('price');
+        SaveRequest $request
+    ) {
+        $products = Product::create(
+            [
+                'name' => $request->input(key: 'name'),
+                'price' => $request->input(key: 'price'),
+                'description' => $request->input(key: 'description'),
+                'quantity' => $request->input(key: 'quantity'),
+                'color' => $request->input(key: 'color'),
+                'height' => $request->input(key: 'height'),
+                'weight' => $request->input(key: 'weight'),
+            ]
+        );
 
-        dd($request->all());
-
+        dd($products->all());
     }
 }
